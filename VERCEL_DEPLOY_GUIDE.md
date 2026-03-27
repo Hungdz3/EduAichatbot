@@ -16,6 +16,7 @@ Nếu bạn muốn tự tạo Project trên Dashboard của Vercel:
 
 1.  Truy cập [Vercel New Project](https://vercel.com/new).
 2.  Chọn repository **Hungdz3/EduAichatbot**.
+    - **Lưu ý về Tên Project:** Tên dự án nên là chữ thường, không có dấu, có thể dùng dấu chấm, gạch dưới hoặc gạch ngang (Ví dụ: `eduai-chatbot`). Không dùng 3 dấu gạch ngang liên tiếp (`---`).
 3.  **QUAN TRỌNG:** Ở mục **Environment Variables**, hãy copy-paste các biến sau từ file `.env.local` vào:
 
 ```text
