@@ -1,5 +1,5 @@
 import OpenAI from 'openai'
-// import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+// import { createServerComponentClientResilient } from '@/lib/supabase/client'
 import { cookies } from 'next/headers'
 
 // Kiểm tra cấu hình OpenRouter

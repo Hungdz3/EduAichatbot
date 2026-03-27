@@ -56,7 +56,8 @@ export default function ChatPage() {
 
   const handleRatingSubmit = async () => {
     if (ratingValue === 0) return
-    const supabase = (await import('@supabase/auth-helpers-nextjs')).createClientComponentClient()
+    const { createClient } = await import('@/lib/supabase/client')
+    const supabase = createClient()
     const { data: { user } } = await supabase.auth.getUser()
     await supabase.from('service_evaluations').insert({
       user_id: user?.id,

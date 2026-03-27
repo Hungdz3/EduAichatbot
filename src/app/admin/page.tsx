@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import { createClient } from '@/lib/supabase/client'
 import { 
   Users, 
   MessageSquare, 
@@ -48,7 +48,7 @@ export default function AdminDashboard() {
   const [requests, setRequests] = useState<FeatureRequest[]>([])
   const [loading, setLoading] = useState(true)
 
-  const supabase = createClientComponentClient()
+  const supabase = createClient()
 
   const fetchData = useCallback(async () => {
     setLoading(true)

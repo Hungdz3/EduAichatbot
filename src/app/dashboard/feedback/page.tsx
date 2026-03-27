@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import { createClient } from '@/lib/supabase/client'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Star, Send, Lightbulb, MessageSquare } from 'lucide-react'
@@ -14,7 +14,7 @@ export default function FeedbackPage() {
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
-  const supabase = createClientComponentClient()
+  const supabase = createClient()
 
   const submitEvaluation = async () => {
     if (rating === 0) return alert('Vui lòng chọn số sao đánh giá.')

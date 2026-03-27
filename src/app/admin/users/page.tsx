@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import { createClient } from '@/lib/supabase/client'
 import { 
   Users, 
   Search, 
@@ -56,7 +56,7 @@ export default function UsersManagementPage() {
   const [isResetting, setIsResetting] = useState(false)
   const [showNewPassword, setShowNewPassword] = useState(false)
 
-  const supabase = createClientComponentClient()
+  const supabase = createClient()
 
   const fetchUsers = useCallback(async () => {
     setLoading(true)

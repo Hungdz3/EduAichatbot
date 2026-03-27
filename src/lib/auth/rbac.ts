@@ -1,11 +1,11 @@
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+import { createServerComponentClientResilient } from '@/lib/supabase/server'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
 type Role = 'admin' | 'teacher'
 
 export async function requireRole(requiredRole: Role) {
-  const supabase = createServerComponentClient({ cookies })
+  const supabase = createServerComponentClientResilient()
   const { data: { session } } = await supabase.auth.getSession()
 
   if (!session) redirect('/login')

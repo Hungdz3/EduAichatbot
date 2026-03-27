@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs'
+import { createRouteClient } from '@/lib/supabase/server'
 import { cookies } from 'next/headers'
 import { callAI } from '@/lib/ai/openrouter'
 import { pipeline } from '@xenova/transformers'
@@ -20,7 +20,7 @@ class EmbeddingPipeline {
 export async function POST(req: Request) {
   try {
     const { message, sessionId, grade, subject } = await req.json()
-    const supabase = createRouteHandlerClient({ cookies })
+    const supabase = createRouteClient()
     
     // Xác thực người dùng
     const { data: { session } } = await supabase.auth.getSession()
