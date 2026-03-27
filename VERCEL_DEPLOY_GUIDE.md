@@ -16,13 +16,17 @@ Nếu bạn muốn tự tạo Project trên Dashboard của Vercel:
 
 1.  Truy cập [Vercel New Project](https://vercel.com/new).
 2.  Chọn repository **Hungdz3/EduAichatbot**.
-3.  **QUAN TRỌNG:** Ở mục **Environment Variables**, hãy copy-paste toàn bộ các biến từ file `.env.local` vào:
-    - `NEXT_PUBLIC_SUPABASE_URL`
-    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-    - `SUPABASE_SERVICE_ROLE_KEY`
-    - `OPENROUTER_API_KEY`
-    - `OPENROUTER_BASE_URL`
-    - `NEXT_PUBLIC_APP_URL` (Sử dụng URL Vercel của bạn sau khi deploy)
+3.  **QUAN TRỌNG:** Ở mục **Environment Variables**, hãy copy-paste các biến sau từ file `.env.local` vào:
+
+```text
+NEXT_PUBLIC_SUPABASE_URL=https://mgmenuzamkwrctcfxait.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1nbWVudXphbWt3cmN0Y2Z4YWl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQxNzMzNjUsImV4cCI6MjA4OTc0OTM2NX0.fevOENz_q3xNQBYyj_4EQQiKxtw-IFN7jCysSazYZRM
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1nbWVudXphbWt3cmN0Y2Z4YWl0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NDE3MzM2NSwiZXhwIjoyMDg5NzQ5MzY1fQ.MiwSp1b9BNEN0wXF7xDv_1cR8R5VuwSsgP8r5dRQy98
+OPENROUTER_API_KEY=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
+OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
+NEXT_PUBLIC_APP_NAME=EduAI
+```
+
 4.  Nhấn **Deploy**.
 
 ## Lưu ý về lỗi build
